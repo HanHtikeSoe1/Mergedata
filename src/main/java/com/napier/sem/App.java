@@ -71,12 +71,18 @@ public class App {
         // Extract country in the world from a class
         ArrayList<country> countries = cw.getCountry(a.con);
         ArrayList<country> region = cw.region_data(a.con,"caribbean");
+        ArrayList<country> continents = cw.getCountriesByContinent(a.con, "Asia");
+
 
         // Printing data
         System.out.println("For World");
         coutput.printPopulation(countries);
         System.out.println("For Region");
         coutput.printPopulation(region);
+        System.out.println("For Continent");
+        coutput.printPopulation(continents);
+
+
 
         // Disconnect from database
         a.disconnect();
