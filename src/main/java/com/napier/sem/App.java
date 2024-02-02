@@ -69,10 +69,11 @@ public class App {
 
         // Array Countries, Region, Continents with the population largest to smallest
         // Extract country in the world from a class
-
+        ArrayList<country> countries = cw.getCountry(a.con);
 
         // Printing data
-
+        System.out.println("For World");
+        coutput.printPopulation(countries);
 
         // Disconnect from database
         a.disconnect();
